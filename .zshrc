@@ -72,7 +72,11 @@ alias inputmt='osascript -e "return text returned of (display dialog \"Input tex
 
 alias https='http --default-scheme="https"'
 
-alias runmongo='mongod --config $HOME/homebrew/etc/mongod.conf'
+alias scanjenv="find $HOME/.sdkman/candidates/java -type d -maxdepth 1 -mindepth 1 -exec jenv add '{}' \;"
+
+### Run services
+alias runredis="redis-server $HOME/homebrew/etc/redis.conf"
+alias runmongo="mongod --config $HOME/homebrew/etc/mongod.conf"
 
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
